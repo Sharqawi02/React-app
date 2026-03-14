@@ -1,0 +1,119 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+  }
+  
+.Nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+.Content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+  }
+  
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+.nav-content{
+    display: block;
+  }
+  
+.nav-menu-container ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem; 
+    margin: 0;
+    padding: 0;
+  }
+.icon-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+
+  }
+.icon-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 1rem;
+  }
+  
+.nav-menu-container ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem;
+  }
+  
+.nav-content a:hover,
+.icon-links a:hover {
+    color: #666;
+  }
+  
+.nav-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+    .menu-toggle {
+      display: block; 
+    }
+  
+
+    .nav-content {
+      position: absolute;
+      top: 4rem;
+      right: 0;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+
+    .nav-content.active {
+      transform: translateX(0);
+    }
+  
+
+    .nav-menu-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+
+    .nav-menu-container ul {
+      flex-direction: column;
+    }
+  
+ 
+    .icon-links {
+      margin-top: 1rem;
+    }
+  }
+  
